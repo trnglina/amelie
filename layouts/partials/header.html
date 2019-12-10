@@ -1,0 +1,12 @@
+<header>
+    <div class="scroll-shadow">
+        <nav class="{{ if .IsHome }}logo-only{{ end }}" id="main-navigation">
+            <ul>
+                <li><a class="logo-link" href="/"><img alt="Home" src="/images/icons/logo.png"></a></li>
+                {{ range .Site.Menus.main }}
+                <li><a href='{{ .URL }}'>{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,125 @@
+// To the extent possible under law, the author(s) have dedicated all copyright
+// and related and neighbouring rights to this software and all related code
+// files to the public domain worldwide. A copy of the CC0 Public Domain
+// Dedication may be obtained at:
+//
+//     http://creativecommons.org/publicdomain/zero/1.0/
+//
+// Unless required by applicable law or agreed to in writing, this software is
+// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.
+
+.read-bar {
+  position: fixed;
+  top: $sizing__base-space;
+  bottom: $sizing__base-space;
+  width: 300px;
+  background: inherit;
+  border-radius: 5px 0 0 0;
+  font-size: 80%;
+  z-index: 10;
+  font-family: $type__title-font-stack;
+
+  @media only screen and (max-width: $breakpoint) {
+    width: 220px;
+  }
+
+  &.expanded {
+    right: 0;
+    z-index: 1000;
+    box-shadow: rgba($colour__link, $alpha: 0.3) 0 0 10px;
+  }
+
+  .toggle-button {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    bottom: 0;
+    left: -35px;
+    width: 35px;
+    height: 35px;
+    background: $colour__accent;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    color: inherit;
+    text-align: left;
+
+    &:disabled {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: $sizing__base-space / 2;
+      background: linear-gradient(
+        90deg,
+        rgba($colour__light, $alpha: 0) 0%,
+        rgba($colour__light, $alpha: 1) 100%
+      );
+    }
+  }
+
+  .scroll-container {
+    padding: $sizing__base-space;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+
+    *:last-child {
+      margin-bottom: $sizing__base-space;
+    }
+  }
+
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 0 10px 0;
+      line-height: 1;
+    }
+
+    a {
+      text-transform: lowercase;
+      text-decoration: none;
+
+      &::before {
+        font-family: monospace;
+        font-size: 10pt;
+        opacity: 0.2;
+      }
+
+      &.H3::before {
+        content: "― ";
+      }
+
+      &.H4::before {
+        content: "―― ";
+      }
+
+      &.H5::before {
+        content: "――― ";
+      }
+
+      &.H6::before {
+        content: "―――― ";
+      }
+    }
+  }
+}
+
+body.dark .read-bar .toggle-button::after {
+  background: linear-gradient(
+    90deg,
+    rgba($colour__dark, $alpha: 0) 0%,
+    rgba($colour__dark, $alpha: 1) 100%
+  );
+}

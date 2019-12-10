@@ -1,0 +1,23 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/pages/404.css">
+{{ end }}
+
+{{ define "main" }}
+<main>
+    <article>
+        <h1>{{ .Title }}</h1>
+        <div aria-hidden="true" class="animation-container">
+            <span class="animated-char">u</span>
+            <span class="animated-char">h</span>
+            <span class="animated-char">-</span>
+            <span class="animated-char">o</span>
+            <span class="animated-char">h</span>
+        </div>
+    </article>
+</main>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="/scripts/anime.js"></script>
+<script src="/scripts/404-animation.js"></script>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/pages/index.css">
+{{ end }}
+
+{{ define "main" }}
+<main>
+    <p class="intro-text">Hi, I'm {{ .Site.Params.author }}. Find here my:
+        <span class="intro-big-text">
+            {{ $menu_items := (.Site.Menus.main) }}
+            {{ $len := (len $menu_items) }}
+            {{ if not (eq 1 $len) }}
+                {{ range $index, $element := $menu_items }}
+                    {{ if not (eq (add $index 1) $len) }}
+                    <a href='{{ $element.URL }}'>{{ $element.Name }}</a>,
+                    {{ else }}
+                    and <a href='{{ $element.URL }}'>{{ $element.Name }}</a>.
+                    {{ end }}
+                {{ end }}
+            {{ else }}
+                {{ $element := (index $menu_items 0) }}
+                <a href='{{ $element.URL }}'>{{ $element.Name }}</a>.
+            {{ end }}
+        <span>
+    </p>
+</main>
+{{ end }}

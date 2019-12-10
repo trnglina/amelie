@@ -1,0 +1,27 @@
+baseURL = "https://trnglina.org"
+languageCode = "en-gb"
+title = "trnglina"
+
+[params]
+  author = "trnglina"
+  description = "Software, design, and words"
+
+[menu]
+  [[menu.main]]
+    identifier = "software"
+    name = "software"
+    url = "/software/"
+    weight = 1
+  [[menu.main]]
+    name = "design"
+    post = "design"
+    url = "/design/"
+    weight = 2
+  [[menu.main]]
+    name = "words"
+    post = "words"
+    url = "/words/"
+    weight = 3
+
+[taxonomies]
+  tag = "tags"

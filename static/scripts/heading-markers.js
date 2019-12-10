@@ -1,0 +1,2 @@
+"use strict";!function(){for(var n=function(n){var e=document.createElement("div");return e.innerHTML='\n    <span class="heading-marker" aria-hidden="true">\n      '.concat(function(n,e){for(var r="",t=0;t<e;t++)r+=n;return r}("•",n),"\n    </span>").trim(),e.firstChild},e=document.querySelectorAll("h2, h3, h4, h5, h6"),r=0;r<e.length;r++)"FIGCAPTION"!=e[r].parentElement.tagName&&e[r].appendChild(new n(e[r].nodeName[1]))}();
+//# sourceMappingURL=heading-markers.js.map

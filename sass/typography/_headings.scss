@@ -1,0 +1,73 @@
+// To the extent possible under law, the author(s) have dedicated all copyright
+// and related and neighbouring rights to this software and all related code
+// files to the public domain worldwide. A copy of the CC0 Public Domain
+// Dedication may be obtained at:
+//
+//     http://creativecommons.org/publicdomain/zero/1.0/
+//
+// Unless required by applicable law or agreed to in writing, this software is
+// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.
+
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $type__title-font-stack;
+  margin: 2em 0 1em 0;
+  text-align: left;
+}
+
+.title,
+h1 {
+  font-size: 225%;
+  font-weight: normal;
+  font-style: italic;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  position: relative;
+  padding-right: 50px;
+
+  .heading-marker {
+    font-size: 50%;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    opacity: 0.4;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &:target .heading-marker {
+    top: 30%;
+  }
+}
+
+h2 {
+  font-size: 165%;
+}
+
+h3 {
+  font-size: 145%;
+}
+
+h4 {
+  font-size: 125%;
+}
+
+h5 {
+  font-size: 100%;
+}
+
+h6 {
+  font-size: 90%;
+}

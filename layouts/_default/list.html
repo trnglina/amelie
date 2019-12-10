@@ -1,0 +1,36 @@
+{{ define "main" }}
+<main>
+    {{ $portfolio := where .Pages "Params.portfolio" true }}
+    {{ if gt (len $portfolio) 0 }}
+    <section style="margin: -1em">
+        <div class="scroll-shadow">
+            <ol class="portfolio-list-presenter">
+                {{ range where .Pages "Params.portfolio" true }}
+                <li>
+                    <a href="{{ .Permalink }}" class="presenter-card">
+                        <img class="cover" src="{{ .Params.cover }}">
+                        <span class="title">{{ .Title }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ol>
+        </div>
+    </section>
+    {{ end }}
+    <section>
+        <ol class="list-presenter">
+            {{ range where .Pages "Params.portfolio" false }}
+            <li>
+                <div class="presenter-card">
+                    <p class="front-matter">
+                        {{ if .Date }}Published <time>{{ .Date.Format "2 January, 2006" }}</time>{{ end }}
+                        {{ if .Params.tags }}in {{ range .Params.tags }}<a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}{{ end }}    
+                    </p>
+                    <a class="title" href="{{ .Permalink }}">{{ .Title }}</a>
+                </div>
+            </li>
+            {{ end }}
+        </ol>
+    </section>
+</main>
+{{ end }}

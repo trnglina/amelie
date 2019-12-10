@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    {{- partial "head.html" . -}}
+    {{- block "styles" . }}{{- end }}
+</head>
+
+<body>
+    {{- partial "header.html" . -}}
+    {{- block "main" . }}{{- end }}
+    {{- partial "footer.html" -}}
+    {{- partial "foot.html" -}}
+    {{- block "scripts" . }}{{- end }}
+</body>
+
+</html>

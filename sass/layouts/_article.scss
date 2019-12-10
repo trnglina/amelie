@@ -1,0 +1,50 @@
+// To the extent possible under law, the author(s) have dedicated all copyright
+// and related and neighbouring rights to this software and all related code
+// files to the public domain worldwide. A copy of the CC0 Public Domain
+// Dedication may be obtained at:
+//
+//     http://creativecommons.org/publicdomain/zero/1.0/
+//
+// Unless required by applicable law or agreed to in writing, this software is
+// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.
+
+article {
+  position: relative;
+  max-width: $sizing__article-width;
+
+  & > *:first-child,
+  & > h1:first-of-type {
+    margin-top: 0;
+  }
+
+  h1,
+  .front-matter {
+    text-align: right;
+  }
+
+  .foreword {
+    font-style: italic;
+    opacity: 0.8;
+  }
+}
+
+.front-matter {
+  margin-bottom: 0;
+  text-transform: lowercase;
+}
+
+.footnote-ref a,
+.footnote-return {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: 0.8 * $sizing__body-text;
+
+  ol {
+    @media only screen and (max-width: $breakpoint) {
+      padding: 0;
+    }
+  }
+}

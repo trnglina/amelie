@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+<meta property="og:image" content="{{ if .Params.image }}/images/{{ .Params.image }}{{ else }}/images/banners/default.png{{ end }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="developer" content="{{ .Site.Params.author }}">
+<meta name="designer" content="{{ .Site.Params.author }}">
+{{ hugo.Generator }}
+
+<title>{{ if .IsHome }}{{ .Site.Params.description }} | {{ else if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+
+<link rel="stylesheet" href="/styles/screen.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">

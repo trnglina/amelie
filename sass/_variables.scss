@@ -1,0 +1,50 @@
+// To the extent possible under law, the author(s) have dedicated all copyright
+// and related and neighbouring rights to this software and all related code
+// files to the public domain worldwide. A copy of the CC0 Public Domain
+// Dedication may be obtained at:
+//
+//     http://creativecommons.org/publicdomain/zero/1.0/
+//
+// Unless required by applicable law or agreed to in writing, this software is
+// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.
+
+// Width of articles
+$sizing__article-width: 800px;
+
+// The basic spacing size
+$sizing__base-space: 40px;
+
+// The size of the navigation logo icon
+$sizing__logo-icon: 80px;
+
+// The basic body font size
+$sizing__body-text: 16pt;
+
+// The basic body line height
+$sizing__body-line-height: 1.6;
+
+// Primary light colour
+$colour__light: #f2f2f2;
+
+// Primary dark colour
+$colour__dark: #07141e;
+
+// Primary accent colour
+$colour__accent: #fe5f55;
+
+// Link colour
+$colour__link: #275172;
+
+// Generic font stack
+$type__font-stack: "Georgia Pro", "Georgia", "Times Europa", "Times New Roman",
+  serif;
+
+// Title font stack
+$type__title-font-stack: "Suisse Works", $type__font-stack;
+
+// Our global easing parameter
+$easing: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+// Our general breakpoint
+$breakpoint: 768px;

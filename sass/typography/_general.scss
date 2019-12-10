@@ -1,0 +1,72 @@
+// To the extent possible under law, the author(s) have dedicated all copyright
+// and related and neighbouring rights to this software and all related code
+// files to the public domain worldwide. A copy of the CC0 Public Domain
+// Dedication may be obtained at:
+//
+//     http://creativecommons.org/publicdomain/zero/1.0/
+//
+// Unless required by applicable law or agreed to in writing, this software is
+// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.
+
+body {
+  background: $colour__light;
+  color: $colour__dark;
+  font-size: $sizing__body-text;
+  font-family: $type__font-stack;
+  line-height: $sizing__body-line-height;
+  font-variant-numeric: oldstyle-nums;
+  hyphens: auto;
+
+  @media only screen and (max-width: $breakpoint) {
+    font-size: 0.8 * $sizing__body-text;
+  }
+
+  *:target {
+    background-color: scale-color($colour__accent, $lightness: 60%);
+    box-shadow: rgba($colour__link, $alpha: 0.3) 1px 1px 5px;
+    padding: 0.25em 0.5em;
+    border-radius: 5px;
+
+    .heading-marker {
+      right: 1em;
+    }
+  }
+
+  &.dark {
+    background: $colour__dark;
+    color: $colour__light;
+
+    *:target {
+      background-color: scale-color($colour__accent, $lightness: -80%);
+    }
+  }
+}
+
+p {
+  margin: 1em 0;
+}
+
+code {
+  font-family: "Source Code Pro", "Consolas", "Fira Code", "Fira Mono",
+    "Inconsolata", monospace;
+}
+
+blockquote {
+  border-left: 2px solid $colour__accent;
+  padding-left: 1em;
+  margin-left: 1em;
+  text-align: left;
+}
+
+hr {
+  max-width: 200px;
+  border-bottom: 1px;
+  margin: $sizing__base-space auto;
+}
+
+img {
+  font-style: italic;
+  text-align: center;
+  font-size: 80%;
+}

@@ -1,0 +1,98 @@
+// To the extent possible under law, the author(s) have dedicated all copyright
+// and related and neighbouring rights to this software and all related code
+// files to the public domain worldwide. A copy of the CC0 Public Domain
+// Dedication may be obtained at:
+//
+//     http://creativecommons.org/publicdomain/zero/1.0/
+//
+// Unless required by applicable law or agreed to in writing, this software is
+// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.
+
+.list-presenter,
+.portfolio-list-presenter {
+  list-style: none;
+  padding: 0;
+
+  .presenter-card {
+    .front-matter {
+      margin: 0;
+    }
+
+    .title {
+      font-style: italic;
+    }
+  }
+}
+
+.list-presenter {
+  margin-top: 0;
+
+  .presenter-card {
+    margin-bottom: $sizing__base-space;
+
+    .title {
+      font-size: 225%;
+      font-weight: normal;
+      font-style: italic;
+    }
+  }
+}
+.portfolio-list-presenter {
+  margin: -1em 0em 3em 0em;
+  padding-bottom: 1em;
+  display: flex;
+  overflow-x: auto;
+
+  li {
+    margin: 1em;
+    width: 300px;
+
+    &:last-child {
+      padding-right: 1em;
+    }
+  }
+
+  .presenter-card {
+    height: 350px;
+    padding: 1em;
+    font-size: 125%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: $colour__accent 0 0 5px;
+    transition: box-shadow 200ms $easing, color 100ms $easing;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    color: inherit;
+    align-items: flex-end;
+
+    &:hover,
+    &:focus {
+      box-shadow: $colour__accent 0 0 10px;
+      transition: box-shadow 200ms $easing, color 100ms $easing;
+
+      .cover {
+        filter: saturate(1);
+        transition: filter 200ms $easing;
+      }
+    }
+
+    .cover {
+      position: absolute;
+      z-index: -1;
+      left: -50%;
+      top: 0;
+      height: 420px;
+      opacity: 0.6;
+      filter: saturate(0.6);
+      transition: filter 200ms $easing;
+    }
+
+    .title {
+      font-size: 100%;
+      font-weight: bold;
+    }
+  }
+}
