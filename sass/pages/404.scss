@@ -11,6 +11,10 @@
 
 @import "variables";
 
+main {
+  overflow: visible;
+}
+
 .animation-container {
   font-size: 0;
   overflow: visible;

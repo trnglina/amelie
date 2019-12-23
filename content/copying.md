@@ -48,6 +48,10 @@ You are provided with **no warranty whatsoever**.
 
 Inevitably, someone else's code is find its way in here as well. This site uses and distributes the following third-party content:
 
+### Fonts
+
+This site uses the Suisse Works font family, conforming to the license provided by Swiss Typefaces. [Swiss Typefaces' licensing information may be found here](https://www.swisstypefaces.com/support/licenses/). These files are not served for the purpose of free redistribution, and cannot be found in the source code repository.
+
 ### anime.js
 
 anime.js is Copyright (c) 2019 Julian Garnier.
