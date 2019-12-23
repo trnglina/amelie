@@ -5,6 +5,7 @@ title = "trnglina"
 [params]
   author = "trnglina"
   description = "Software, design, and words"
+  twitter = "@trnglina"
 
 [menu]
 #  [[menu.main]]

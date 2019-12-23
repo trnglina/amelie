@@ -1,5 +1,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="developer" content="{{ .Site.Params.author }}">
+<meta name="designer" content="{{ .Site.Params.author }}">
+{{ hugo.Generator }}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{ .Permalink }}">
@@ -11,11 +21,6 @@
 {{ end }}
 <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
-<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta name="author" content="{{ .Site.Params.author }}">
-<meta name="developer" content="{{ .Site.Params.author }}">
-<meta name="designer" content="{{ .Site.Params.author }}">
-{{ hugo.Generator }}
 
 <title>{{ if .IsHome }}{{ .Site.Params.description }} | {{ else if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
