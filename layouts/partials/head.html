@@ -15,8 +15,10 @@
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
 {{ if .Params.image }}
+<meta name="twitter:image:src" content="{{ (printf "%s%s" "images/" | .Params.image) | absURL }}" />
 <meta property="og:image" content="{{ (printf "%s%s" "images/" | .Params.image) | absURL }}">
 {{ else }}
+<meta name="twitter:image:src" content="{{ "images/banners/default.png" | absURL }}" />
 <meta property="og:image" content="{{ "images/banners/default.png" | absURL }}">
 {{ end }}
 <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
