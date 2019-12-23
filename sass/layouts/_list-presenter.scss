@@ -38,6 +38,7 @@
     }
   }
 }
+
 .portfolio-list-presenter {
   margin: -1em 0em 3em 0em;
   padding-bottom: 1em;
@@ -63,36 +64,24 @@
     transition: box-shadow 200ms $easing, color 100ms $easing;
     position: relative;
     z-index: 1;
-    overflow: hidden;
-    display: flex;
-    color: inherit;
-    align-items: flex-end;
+    display: block;
+    color: $colour__light;
+    text-shadow: 0px 0px 2px $colour__dark, 2px 2px 2px $colour__dark;
+    background-size: cover;
+    background-position: center center;
 
     &:hover,
     &:focus {
       box-shadow: $colour__accent 0 0 10px;
       transition: box-shadow 200ms $easing, color 100ms $easing;
-
-      .cover {
-        filter: saturate(1);
-        transition: filter 200ms $easing;
-      }
-    }
-
-    .cover {
-      position: absolute;
-      z-index: -1;
-      left: -50%;
-      top: 0;
-      height: 420px;
-      opacity: 0.6;
-      filter: saturate(0.6);
-      transition: filter 200ms $easing;
     }
 
     .title {
-      font-size: 100%;
+      font-size: 140%;
+      margin-bottom: 0;
       font-weight: bold;
+      position: absolute;
+      bottom: 1em;
     }
   }
 }

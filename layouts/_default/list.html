@@ -7,8 +7,7 @@
             <ol class="portfolio-list-presenter">
                 {{ range where .Pages "Params.portfolio" true }}
                 <li>
-                    <a href="{{ .Permalink }}" class="presenter-card">
-                        <img class="cover" src="{{ .Params.cover }}">
+                    <a href="{{ .Permalink }}" class="presenter-card" style="background-image: url({{ .Params.cover }});">
                         <span class="title">{{ .Title }}</span>
                     </a>
                 </li>
