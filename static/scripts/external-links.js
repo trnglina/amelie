@@ -1,0 +1,2 @@
+"use strict";!function(){for(var e=function(){var e=document.createElement("div");return e.innerHTML='\n    <img class="external-icon" aria-hidden="true" src="/images/icons/external.svg">'.trim(),e.firstChild},n=document.getElementsByTagName("a"),t=0;t<n.length;t++){var r=n[t];window.location.hostname!=r.hostname&&(r.appendChild(new e),r.title="This is an external link that will take you away from trnglina.org",r.target="_blank",r.rel="noopener noreferrer")}}();
+//# sourceMappingURL=external-links.js.map

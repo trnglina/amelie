@@ -30,8 +30,8 @@
     margin-bottom: $sizing__base-space;
 
     .title {
-      font-size: 225%;
-      font-weight: normal;
+      display: block;
+      margin-top: 0;
     }
   }
 }
