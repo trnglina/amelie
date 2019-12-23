@@ -11,25 +11,11 @@
 
 @import "variables";
 
-.intro-text {
+h1 {
   margin: 0;
-  font-style: italic;
-  font-size: 3vw;
-  font-family: $type__title-font-stack;
-
-  @media only screen and (max-width: $breakpoint) {
-    font-size: inherit;
-  }
 }
 
-.intro-big-text {
-  display: block;
-  margin: 0 0 $sizing__base-space 0;
-  font-size: 5vw;
-  line-height: 1.2;
+p {
+  margin: 1em 0;
   font-family: $type__title-font-stack;
-
-  @media only screen and (max-width: $breakpoint) {
-    font-size: 225%;
-  }
 }

@@ -15,12 +15,10 @@
   padding: 0;
 
   .presenter-card {
+    max-width: $sizing__article-width;
+
     .front-matter {
       margin: 0;
-    }
-
-    .title {
-      font-style: italic;
     }
   }
 }
@@ -34,7 +32,6 @@
     .title {
       font-size: 225%;
       font-weight: normal;
-      font-style: italic;
     }
   }
 }

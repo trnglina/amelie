@@ -4,23 +4,27 @@
 
 {{ define "main" }}
 <main>
-    <p class="intro-text">Hi, I'm {{ .Site.Params.author }}. Find here my
-        <span class="intro-big-text">
-            {{ $menu_items := (.Site.Menus.main) }}
-            {{ $len := (len $menu_items) }}
-            {{ if not (eq 1 $len) }}
-                {{ range $index, $element := $menu_items }}
-                    {{ if not (eq (add $index 1) $len) }}
-                    <a href='{{ $element.URL }}'>{{ $element.Name }}</a>,
-                    {{ else }}
-                    and <a href='{{ $element.URL }}'>{{ $element.Name }}</a>.
-                    {{ end }}
+    <h1>Hi, I'm {{ .Site.Params.author }}.</h1>
+    <p>
+        I'm a developer, designer, and I enjoy writing. Find here my
+        {{ $menu_items := (.Site.Menus.main) }}
+        {{ $len := (len $menu_items) }}
+        {{ if not (eq 1 $len) }}
+            {{ range $index, $element := $menu_items }}
+                {{ if not (eq (add $index 1) $len) }}
+                <a href='{{ $element.URL }}'>{{ $element.Name }}</a>,
+                {{ else }}
+                and <a href='{{ $element.URL }}'>{{ $element.Name }}</a>.
                 {{ end }}
-            {{ else }}
-                {{ $element := (index $menu_items 0) }}
-                <a href='{{ $element.URL }}'>{{ $element.Name }}</a>.
             {{ end }}
-        <span>
-    </p>
+        {{ else }}
+            {{ $element := (index $menu_items 0) }}
+            <a href='{{ $element.URL }}'>{{ $element.Name }}</a>.
+        {{ end }}
+    <p>
+    <hr>
+    <p>Reading <a href="http://houbunsha.co.jp/comics/detail.php?p=%CC%EB%BF%B9%A4%CE%B9%F1%A4%CE%A5%BD%A5%E9%A5%CB">夜森の国のソラニ</a>.</p>
+    <p>Watching <a href="https://working-www.com/">WWW.WORKING!!</a>.</p>
+    <p>Playing <a href="http://www.koeitecmoeurope.com/ryza/"><em>Atelier Ryza: Ever Darkness & the Secret Hideout</em></a>.</p>
 </main>
 {{ end }}

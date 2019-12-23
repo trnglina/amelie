@@ -26,6 +26,7 @@
                         {{ if .Params.tags }}in {{ range .Params.tags }}<a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}{{ end }}    
                     </p>
                     <a class="title" href="{{ .Permalink }}">{{ .Title }}</a>
+                    <p>{{ .Summary }} <a href="{{ .Permalink }}">Continue →</a></p>
                 </div>
             </li>
             {{ end }}

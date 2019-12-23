@@ -37,8 +37,9 @@ $colour__accent: #fe5f55;
 $colour__link: #275172;
 
 // Generic font stack
-$type__font-stack: "Georgia Pro", "Georgia", "Times Europa", "Times New Roman",
-  serif;
+$type__font-stack: "Hiragino Mincho", "ヒラギノ明朝", "YuMincho", "Yu Mincho",
+  "游明朝", "Noto Serif", "Georgia Pro", "Georgia", "Times Europa",
+  "Times New Roman", serif;
 
 // Title font stack
 $type__title-font-stack: "Suisse Works", $type__font-stack;
