@@ -94,7 +94,16 @@
             break;
         }
       }
-      return root;
+
+      // this will make the bar fail to appear if there are no elements
+      // in the toc. this is a hack atm, but it works. if, in the future,
+      // there are other things in the bar, a more sophisticated system
+      // would be better
+      if (root.children.length > 0) {
+        return root;
+      } else {
+        return null;
+      }
     })();
 
     bar.toggleButton = bar.getElementsByClassName('toggle-button')[0];
@@ -111,17 +120,19 @@
   const article = container.getElementsByTagName('article')[0];
   const bar = new ReadBar(article);
 
-  window.addEventListener('resize', () => bar.updatePosition());
-  window.addEventListener('load', () => bar.updatePosition());
+  if (bar) {
+    window.addEventListener('resize', () => bar.updatePosition());
+    window.addEventListener('load', () => bar.updatePosition());
 
-  body.addEventListener('keydown', ({ ctrlKey, altKey, keyCode }) => {
-    if (ctrlKey && altKey && keyCode == 82) {
-      bar.toggle();
-      if (bar.isExpanded()) {
-        bar.children[0].focus();
+    body.addEventListener('keydown', ({ ctrlKey, altKey, keyCode }) => {
+      if (ctrlKey && altKey && keyCode == 82) {
+        bar.toggle();
+        if (bar.isExpanded()) {
+          bar.children[0].focus();
+        }
       }
-    }
-  });
+    });
 
-  container.insertBefore(bar, article);
+    container.insertBefore(bar, article);
+  }
 })();
