@@ -18,7 +18,7 @@
     {{ end }}
     <section>
         <ol class="list-presenter">
-            {{ range where .Pages "Params.portfolio" false }}
+            {{ range where .Pages "Params.portfolio" "!=" true }}
             <li>
                 <div class="presenter-card">
                     <p class="front-matter">
