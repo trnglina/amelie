@@ -2,7 +2,6 @@
 title: "Copying"
 date: 2019-10-13T10:36:00-06:00
 draft: false
-portfolio: false
 ---
 
 This site, its code, and all its content, are licensed freely for anyone to modify and redistribute with few restrictions. Does this mean you could download the entire site, upload it somewhere else, and call it your own? Not quite—the purpose of this page is to make clear what you _can_ and _cannot_ do.

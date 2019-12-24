@@ -5,5 +5,6 @@ draft: true
 portfolio: true
 cover: /images/banners/the-crw.png
 tags:
+- promotional-material
 ---
 
