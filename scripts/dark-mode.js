@@ -60,10 +60,8 @@
     }
   });
 
-  const button = new DarkModeButton(
-      '/images/icons/moon.svg',
-      '/images/icons/sun.svg'
-  );
+  const button =
+      new DarkModeButton('/images/icons/moon.svg', '/images/icons/sun.svg');
 
   button.onclick = () => {
     body.toggleDarkMode();

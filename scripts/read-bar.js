@@ -14,7 +14,7 @@
 (() => {
   const basePadding = 40;
 
-  const ReadBar = function (article) {
+  const ReadBar = function(article) {
     const bar = (() => {
       const template = document.createElement('div');
       template.innerHTML = `
@@ -28,13 +28,13 @@
 
     bar.isExpanded = () => bar.classList.contains('expanded');
 
-    bar.updatePosition = function () {
+    bar.updatePosition = function() {
       if (bar.style.display == 'none') {
         bar.style.display = 'block';
       }
 
       if (window.innerWidth <
-        article.clientWidth + 2 * basePadding + this.clientWidth) {
+          article.clientWidth + 2 * basePadding + this.clientWidth) {
         this.toggleButton.disabled = false;
       } else {
         if (bar.isExpanded()) {
@@ -53,7 +53,7 @@
       }
     };
 
-    bar.setExpanded = function (expanded) {
+    bar.setExpanded = function(expanded) {
       if (expanded) {
         bar.classList.add('expanded');
         bar.updatePosition();
@@ -63,7 +63,7 @@
       }
     };
 
-    bar.toggle = function () {
+    bar.toggle = function() {
       if (bar.isExpanded()) {
         bar.setExpanded(false);
       } else {
@@ -94,16 +94,7 @@
             break;
         }
       }
-
-      // this will make the bar fail to appear if there are no elements
-      // in the toc. this is a hack atm, but it works. if, in the future,
-      // there are other things in the bar, a more sophisticated system
-      // would be better
-      if (root.children.length > 0) {
-        return root;
-      } else {
-        return null;
-      }
+      return root;
     })();
 
     bar.toggleButton = bar.getElementsByClassName('toggle-button')[0];
@@ -120,11 +111,11 @@
   const article = container.getElementsByTagName('article')[0];
   const bar = new ReadBar(article);
 
-  if (bar) {
+  if (bar && bar.toc.children.length > 0) {
     window.addEventListener('resize', () => bar.updatePosition());
     window.addEventListener('load', () => bar.updatePosition());
 
-    body.addEventListener('keydown', ({ ctrlKey, altKey, keyCode }) => {
+    body.addEventListener('keydown', ({ctrlKey, altKey, keyCode}) => {
       if (ctrlKey && altKey && keyCode == 82) {
         bar.toggle();
         if (bar.isExpanded()) {

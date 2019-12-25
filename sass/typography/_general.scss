@@ -22,6 +22,11 @@ body {
     font-size: 0.8 * $sizing__body-text;
   }
 
+  *::selection {
+    background-color: $colour__accent;
+    color: $colour__light;
+  }
+
   *:target {
     background-color: scale-color($colour__accent, $lightness: 60%);
     box-shadow: rgba($colour__link, $alpha: 0.3) 1px 1px 5px;

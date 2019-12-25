@@ -24,7 +24,9 @@
         this.style.maxWidth = '100%';
         this.classList.remove('expanded');
       } else {
-        this.style.maxWidth = `calc(100vw - ${2 * basePadding + (window.innerWidth - container.clientWidth)}px)`;
+        const maxWidth =
+            2 * basePadding + (window.innerWidth - container.clientWidth);
+        this.style.maxWidth = `calc(100vw - ${maxWidth}px)`;
         this.classList.add('expanded');
       }
     };

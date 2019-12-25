@@ -12,10 +12,12 @@
 /* eslint-disable require-jsdoc */
 
 (() => {
-  const ExternalLinkIcon = function () {
+  const ExternalLinkIcon = function() {
     const template = document.createElement('div');
     template.innerHTML = `
-    <img class="external-icon" aria-hidden="true" src="/images/icons/external.svg">`.trim();
+    <img class="external-icon"
+         aria-hidden="true"
+         src="/images/icons/external.svg">`.trim();
     return template.firstChild;
   };
 
@@ -24,7 +26,8 @@
     const link = links[i];
     if (window.location.hostname != link.hostname) {
       link.appendChild(new ExternalLinkIcon());
-      link.title = 'This is an external link that will take you away from trnglina.org';
+      link.title =
+          'This is an external link that will take you away from trnglina.org';
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
     }

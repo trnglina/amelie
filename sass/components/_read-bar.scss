@@ -11,8 +11,8 @@
 
 .read-bar {
   position: fixed;
-  top: $sizing__base-space;
-  bottom: $sizing__base-space;
+  top: $sizing__base-space / 2;
+  bottom: $sizing__base-space / 2;
   width: 300px;
   background: inherit;
   border-radius: 5px 0 0 0;
