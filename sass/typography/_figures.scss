@@ -20,7 +20,7 @@ figure {
     border-radius: 5px;
 
     &.expanded {
-      box-shadow: rgba($colour__link, $alpha: 0.3) 0 0 10px;
+      box-shadow: rgba(0, 0, 0, 0.6) 0 0 10px;
       transition: all 150ms $easing;
     }
   }

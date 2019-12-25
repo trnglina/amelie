@@ -21,13 +21,14 @@
   font-family: $type__title-font-stack;
 
   @media only screen and (max-width: $breakpoint) {
+    font-size: 100%;
     width: 220px;
   }
 
   &.expanded {
     right: 0;
     z-index: 1000;
-    box-shadow: rgba($colour__link, $alpha: 0.3) 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0 0 10px;
   }
 
   .toggle-button {
@@ -84,7 +85,7 @@
 
     li {
       margin: 0 0 10px 0;
-      line-height: 1;
+      line-height: 1.2;
     }
 
     a {
