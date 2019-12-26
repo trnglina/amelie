@@ -23,10 +23,17 @@
                 <div class="presenter-card">
                     <p class="front-matter">
                         {{ if .Date }}Published <time>{{ .Date.Format "2 January, 2006" }}</time>{{ end }}
-                        {{ if .Params.tags }}in {{ range .Params.tags }}<a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}{{ end }}    
+                        {{ if .Params.tags }} in
+                            {{ $tag_items := (.Params.tags) }}
+                            {{ $len := (len $tag_items) }}
+                            {{ range $index, $element := $tag_items }}
+                                <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ if not (eq (add $index 1) $len) }},{{ else }}.{{ end }}
+                            {{ end }}
+                        {{ end }}
                     </p>
                     <a class="title" href="{{ .Permalink }}">{{ .Title }}</a>
                     <p>{{ .Summary }} <a href="{{ .Permalink }}">Continue&nbsp;→</a></p>
+                    <hr>
                 </div>
             </li>
             {{ end }}
