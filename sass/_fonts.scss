@@ -19,8 +19,7 @@
 //    /static/fonts/ directory
 //
 // This project does not distribute any fonts that are the intellectual
-// property of others..
-
+// property of others.
 @font-face {
   font-family: "Suisse Works";
   src: url("/fonts/SuisseWorks-Book-WebXL.woff2") format("woff2"),
@@ -53,19 +52,10 @@
   font-style: italic;
 }
 
-/*!
- * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
 @font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
+  font-family: "Suisse Intl Condensed";
+  src: url("/fonts/SuisseIntlCond-Light-WebS.woff2") format("woff2"),
+    url("/fonts/SuisseIntlCond-Light-WebS.woff") format("woff");
   font-weight: normal;
-  font-display: auto;
-  src: url("/fonts/fa-brands-400.woff2") format("woff2"),
-    url("/fonts/fa-brands-400.woff") format("woff");
-}
-
-.fab {
-  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
 }

@@ -1,3 +1,10 @@
+{{ define "meta" }}
+    {{ $posts := where .Pages "Params.portfolio" "!=" true }}
+    {{ if gt (len $posts) 0 }}
+    <meta http-equiv="last-modified" content="{{ (index $posts 0).Date.Format "2006-01-02" }}">
+    {{ end }}
+{{ end }}
+
 {{ define "main" }}
 <main>
     {{ $portfolio := where .Pages "Params.portfolio" true }}
@@ -5,7 +12,7 @@
     <section style="margin: -1em">
         <div class="scroll-shadow">
             <ol class="portfolio-list-presenter">
-                {{ range where .Pages "Params.portfolio" true }}
+                {{ range $portfolio }}
                 <li>
                     <a href="{{ .Permalink }}" class="presenter-card" style="background-image: url({{ .Params.cover }});">
                         <span class="title">{{ .Title }}</span>

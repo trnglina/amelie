@@ -12,14 +12,14 @@
         {{ if not (eq 1 $len) }}
             {{ range $index, $element := $menu_items }}
                 {{ if not (eq (add $index 1) $len) }}
-                <a href='{{ $element.URL }}'>{{ $element.Name }}</a>,
+                <a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a class="update-date">,
                 {{ else }}
-                and <a href='{{ $element.URL }}'>{{ $element.Name }}</a>.
+                and <a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a>.
                 {{ end }}
             {{ end }}
         {{ else }}
             {{ $element := (index $menu_items 0) }}
-            <a href='{{ $element.URL }}'>{{ $element.Name }}</a>.
+            <a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a class="update-date">.
         {{ end }}
     <p>
     <hr>
@@ -27,4 +27,8 @@
     <p>Watching <a href="http://www.machine-doll.com/">Unbreakable Machine-Doll</a> and <a href="https://www.tbs.co.jp/anime/sasami/">Sasami-san@Ganbaranai</a>.</p>
     <p>Playing (or perhaps also reading?) <a href="https://www.kogado.com/sw/contents/kuroneko/sr2017/en/">Symphonic Rain</a>.</p>
 </main>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="/scripts/index-dates.js"></script>
 {{ end }}
