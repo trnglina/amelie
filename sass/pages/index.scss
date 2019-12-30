@@ -17,10 +17,12 @@ h1 {
 
 p {
   margin: 1em 0;
+  line-height: 2;
   font-family: $type__title-font-stack;
 }
 
 a.update-date {
+  display: inline-block;
   position: relative;
 }
 
@@ -30,6 +32,6 @@ sup.last-updated {
   left: -50%;
   right: -50%;
   text-align: center;
-  top: -1.5em;
+  top: -30%;
   font-size: 70%;
 }
