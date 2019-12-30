@@ -22,7 +22,6 @@ p {
 }
 
 a.update-date {
-  display: inline-block;
   position: relative;
 }
 
@@ -32,6 +31,6 @@ sup.last-updated {
   left: -50%;
   right: -50%;
   text-align: center;
-  top: -30%;
+  top: -1.3em;
   font-size: 70%;
 }
