@@ -15,11 +15,7 @@
   const LastUpdatedIndicator = function(date) {
     const template = document.createElement('div');
     template.innerHTML = `
-        <span class="last-updated">
-          <span class="marker">
-            up. <time datetime="${date}">${date.replace(/-/g, '/').substring(2)}</time>
-          </span>
-        </span>`.trim();
+        <span class="last-updated"><span class="marker">up. <time datetime="${date}">${date.replace(/-/g, '/').substring(2)}</time></span></span>`.trim();
     return template.firstChild;
   };
 

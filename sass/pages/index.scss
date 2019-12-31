@@ -23,11 +23,11 @@ main p {
 .last-updated {
   white-space: nowrap;
 
-  &::before {
-    content: " ";
-  }
-
   .marker {
+    &::before {
+      content: " ";
+    }
+
     font-size: 70%;
     font-variant-caps: small-caps;
   }
