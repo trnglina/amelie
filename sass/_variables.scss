@@ -44,9 +44,6 @@ $type__font-stack: "Georgia Pro", "Georgia", "Times Europa", "Times New Roman",
 // Title font stack
 $type__title-font-stack: "Suisse Works", $type__font-stack;
 
-// Condensed font stack
-$type__condensed-font-stack: "Suisse Intl Condensed", $type__title-font-stack;
-
 // Our global easing parameter
 $easing: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 

@@ -3,7 +3,7 @@
     <article>
         {{ if not .Params.portfolio }}
         <p class="front-matter">
-            {{ if .Date }}Published <time>{{ .Date.Format "2 January, 2006" }}</time>{{ end }}
+            {{ if .Date }}Published <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2 January, 2006" }}</time>{{ end }}
             {{ if .Params.tags }} in
                 {{ $tag_items := (.Params.tags) }}
                 {{ $len := (len $tag_items) }}

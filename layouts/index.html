@@ -12,14 +12,14 @@
         {{ if not (eq 1 $len) }}
             {{ range $index, $element := $menu_items }}
                 {{ if not (eq (add $index 1) $len) }}
-                <span style="white-space: nowrap;"><a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a class="update-date">,</span>
+                <a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a class="update-date">,
                 {{ else }}
-                and <span style="white-space: nowrap;"><a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a>.</span>
+                and <a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a>.
                 {{ end }}
             {{ end }}
         {{ else }}
             {{ $element := (index $menu_items 0) }}
-            <span style="white-space: nowrap;"><a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a class="update-date">.</span>
+            <a class="update-date" href='{{ $element.URL }}'>{{ $element.Name }}</a class="update-date">.
         {{ end }}
     <p>
     <hr>
@@ -30,5 +30,5 @@
 {{ end }}
 
 {{ define "scripts" }}
-<script src="/scripts/index-dates.js"></script>
+<script src="/scripts/last-updated.js"></script>
 {{ end }}
