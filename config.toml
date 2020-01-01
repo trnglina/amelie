@@ -12,11 +12,11 @@ title = "trnglina"
 #    name = "software"
 #    url = "/software/"
 #    weight = 1
-#  [[menu.main]]
-#    name = "design"
-#    post = "design"
-#    url = "/design/"
-#    weight = 2
+  [[menu.main]]
+    name = "design"
+    post = "design"
+    url = "/design/"
+    weight = 2
   [[menu.main]]
     name = "words"
     post = "words"

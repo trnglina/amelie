@@ -1,7 +1,6 @@
 {{ define "meta" }}
-    {{ $posts := where .Pages "Params.portfolio" "!=" true }}
-    {{ if gt (len $posts) 0 }}
-    <meta http-equiv="last-modified" content="{{ (index $posts 0).Date.Format "2006-01-02" }}">
+    {{ if gt (len .Pages) 0 }}
+    <meta http-equiv="last-modified" content="{{ (index .Pages 0).Date.Format "2006-01-02" }}">
     {{ end }}
 {{ end }}
 
@@ -17,6 +16,7 @@
                     <a href="{{ .Permalink }}" class="presenter-card" style="background-image: url({{ .Params.cover }});">
                         <span class="title">{{ .Title }}</span>
                     </a>
+                    {{ if .Date }}<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2006" }}</time>{{ end }}
                 </li>
                 {{ end }}
             </ol>

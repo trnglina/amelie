@@ -45,9 +45,40 @@
   li {
     margin: 1em;
     width: 300px;
+    font-style: italic;
+    position: relative;
 
     &:last-child {
       padding-right: 1em;
+    }
+
+    time {
+      z-index: 10;
+      display: block;
+      position: absolute;
+      text-align: right;
+      font-family: $type__title-font-stack;
+      font-weight: bold;
+      letter-spacing: 0.25em;
+      margin-right: -0.25em;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      font-size: 150%;
+      right: $sizing__base-space;
+      bottom: -1.2em;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -10%;
+        top: 10%;
+        bottom: 40%;
+        left: 40%;
+        z-index: -1;
+        background: $colour__accent;
+        border-radius: 5px 0 5px 5px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 
@@ -57,19 +88,18 @@
     font-size: 125%;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: $colour__accent 0 0 5px;
     transition: box-shadow 200ms $easing, color 100ms $easing;
     position: relative;
     z-index: 1;
     display: block;
     color: $colour__light;
-    text-shadow: 0px 0px 2px $colour__dark, 2px 2px 2px $colour__dark;
+    text-shadow: 0px 0px 3px $colour__dark, 2px 2px 3px $colour__dark;
     background-size: cover;
     background-position: center center;
 
     &:hover,
     &:focus {
-      box-shadow: $colour__accent 0 0 10px;
+      box-shadow: rgba(0, 0, 0, 0.6) 0 0 8px;
       transition: box-shadow 200ms $easing, color 100ms $easing;
     }
 
