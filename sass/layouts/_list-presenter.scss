@@ -59,12 +59,10 @@
       text-align: right;
       font-family: $type__title-font-stack;
       font-weight: bold;
-      letter-spacing: 0.25em;
-      margin-right: -0.25em;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
       font-size: 150%;
-      right: $sizing__base-space;
-      bottom: -1.2em;
+      right: $sizing__base-space - 11;
+      bottom: -1.1em;
 
       &::after {
         content: "";
@@ -73,7 +71,7 @@
         right: -10%;
         top: 10%;
         bottom: 40%;
-        left: 40%;
+        left: 30%;
         z-index: -1;
         background: $colour__accent;
         border-radius: 5px 0 5px 5px;
@@ -108,7 +106,7 @@
       margin-bottom: 0;
       font-weight: bold;
       position: absolute;
-      bottom: 1em;
+      bottom: 0.5em;
     }
   }
 }

@@ -3,8 +3,8 @@ title: "A warm place"
 date: 2019-12-30T13:55:00-07:00
 draft: false
 tags:
-- fiction
-- vignette
+- Fiction
+- Vignette
 ---
 
 I used to stare at the ceiling fan in my room before I went to sleep. Wrapped in a blanket, with the flickers and shimmers of a city at night behind me, I traced the shapes of fan blades above me. I could pick up a pencil, place it to the air in front of my eyes, and sketch out each stroke as I followed their edges. One, two. One, two.

@@ -8,7 +8,7 @@
                 {{ $tag_items := (.Params.tags) }}
                 {{ $len := (len $tag_items) }}
                 {{ range $index, $element := $tag_items }}
-                    <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ if not (eq (add $index 1) $len) }},{{ else }}.{{ end }}
+                    <a class="tag" href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ if not (eq (add $index 1) $len) }},{{ else }}.{{ end }}
                 {{ end }}
             {{ end }}
         </p>

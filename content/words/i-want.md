@@ -3,7 +3,7 @@ title: "I want"
 date: 2019-12-22T21:52:43-07:00
 draft: false
 tags:
-- non-fiction
+- Non-fiction
 ---
 
 It's not often I mention the things I want.
